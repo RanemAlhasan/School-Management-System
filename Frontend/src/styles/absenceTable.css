@@ -1,0 +1,46 @@
+table.absence {
+    border-collapse: collapse;
+    margin: 30px auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width:90%;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
+
+}
+  table.absence th,
+  table.absence td {
+    padding: 12px 15px;
+}
+
+  table.absence thead th{
+    background-color:#71d58e;
+    color: #ffffff;
+    text-align: left;
+    font-size: 1.5em;
+    border-radius: 10px 10px 0px 0px;
+
+  }
+  table.absence tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+table.absence tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+table.absence tbody tr:last-of-type {
+    border-bottom: 2px solid #71d58e;
+    border-radius: 10px 10px 0px 0px;
+}
+.tableHeader{
+  background-color:#71d58e;
+  color: #ffffff;
+  font-size: 1.5em;
+  border-top: 1px dashed #fff;
+}
+@media (max-width: 800px) {
+  table.absence {
+    width: 95%;
+    /* margin: 30px auto; */
+  }
+}

@@ -1,0 +1,99 @@
+  div#get-teachers div#selection-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50vw;
+  }
+  
+  div#get-teachers div.selection-part {
+    flex-basis: 40%;
+    margin: 0 0 10px 10px;
+  }
+  
+  div#get-teachers div.selection-part p {
+    padding-left: 10px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  div.selection-part p.green {
+    background-color: #71d58e;
+  }
+  
+  div.selection-part p.red {
+    background-color: #e74c3c;
+  }
+  
+  div#student-info {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #e74c3c;
+    margin-top: 15px;
+    border-radius: 10px;
+  }
+  
+  div.layoff {
+    margin-top: 120px;
+  }
+  
+  div#school-content div#content div.layoff h4 {
+    margin-left: 0;
+  }
+  
+  div#student-info button {
+    background-color: #e74c3c;
+  }
+  
+  div#layoff .select,
+  div#layoff input {
+    width: 24.5vw;
+    margin-left: 10px;
+  }
+  
+  div#layoff .select {
+    margin-bottom: 10px;
+  }
+  
+  div#layoff div.info p {
+    text-align: center;
+    font-size: 1em;
+  }
+  
+  div#layoff div.info button {
+    display: block;
+    margin: auto;
+    height: auto;
+    margin-top: 10px;
+    background-color: #e74c3c;
+  }
+  
+  div#layoff div.info div.title {
+    background-color: #e74c3c;
+  }
+
+  .selection-part1 input{
+    margin: 20px 0px 20px 5px;
+    width: 30vw;
+}
+  
+  @media (max-width: 900px) {
+    div#get-teachers div#selection-container {
+      width: 100%;
+    }
+    div#get-teachers div.selection-part {
+      flex-basis: 43%;
+    }
+    div#get-teachers div#info-container div.info {
+      flex-basis: 45%;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    div#get-teachers div#selection-container {
+      width: 100vw;
+    }
+    div#get-teachers div.selection-part {
+      flex-basis: 47%;
+    }
+  }
+  

@@ -1,0 +1,3376 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* CODE */
+
+/**
+
+Absence Table Css
+
+*/
+
+table.absence {
+  border-collapse: collapse;
+  margin: 30px auto;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  width: 90%;
+
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
+}
+table.absence th,
+table.absence td {
+  padding: 12px 15px;
+}
+
+table.absence thead th {
+  background-color: #71d58e;
+  color: #ffffff;
+  text-align: left;
+  font-size: 1.5em;
+  border-radius: 10px 10px 0px 0px;
+}
+table.absence tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+table.absence tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+table.absence tbody tr:last-of-type {
+  border-bottom: 2px solid #71d58e;
+  border-radius: 10px 10px 0px 0px;
+}
+.tableHeader {
+  background-color: #71d58e;
+  color: #ffffff;
+  font-size: 1.5em;
+  border-top: 1px dashed #fff;
+}
+@media (max-width: 800px) {
+  table.absence {
+    width: 95%;
+    /* margin: 30px auto; */
+  }
+}
+
+/**
+
+Absence Table Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Add Subject Css
+
+*/
+
+.subject {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid hsl(137, 54%, 64%);
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px 30px 10px 20px;
+  /* background-color:hsl(137, 54%, 64%) ; */
+}
+#title1 {
+  text-align: center;
+  font-size: 1em;
+  padding: 10px 5px;
+  border-radius: 10px 10px 0px 0px;
+}
+.form input {
+  margin-bottom: 20px;
+}
+.form div#select {
+  margin-bottom: 0px;
+}
+#grades1 {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-left: 10px;
+}
+#grades1 #grade1.active {
+  background-color: #2d9c4d;
+  color: #fff;
+}
+
+#grades1 #grade1 {
+  background-color: #282424;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.2em;
+  flex-basis: 47%;
+  margin: 0 10px 10px 0px;
+  padding: 15px 6px;
+  color: #fff;
+}
+
+@media (max-width: 1350px) {
+  .subject {
+    flex-basis: 20%;
+  }
+  #grades1 #grade1 {
+    flex-basis: 46%;
+  }
+  .subject input {
+    margin-bottom: 20px;
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 1150px) {
+  .subject {
+    flex-basis: 20%;
+  }
+  #grades1 #grade1 {
+    flex-basis: 45%;
+  }
+  .subject input {
+    margin-bottom: 20px;
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .subject {
+    flex-basis: 20%;
+  }
+  #grades1 #grade1 {
+    flex-basis: 100%;
+  }
+  .subject input {
+    margin-bottom: 20px;
+    flex-basis: 100%;
+  }
+}
+
+/**
+
+Add Subject Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Animate Css
+
+*/
+
+span {
+  animation: text-show 1.5s ease-in-out 1 forwards;
+  font-size: 2em;
+  opacity: 0;
+}
+
+#animation-container {
+  text-align: center;
+  color: #71d58e;
+}
+
+#animation-container span:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+#animation-container span:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+#animation-container span:nth-child(4) {
+  animation-delay: 0.75s;
+}
+
+#animation-container span:nth-child(6) {
+  animation-delay: 1s;
+}
+#animation-container span:nth-child(7) {
+  animation-delay: 1.25s;
+}
+
+@keyframes text-show {
+  0% {
+    opacity: 0;
+  }
+  14%,
+  100% {
+    opacity: 1;
+  }
+}
+
+/*_____________________________*/
+
+/**
+   Animate
+  */
+
+div#signup ul li.active a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 5px;
+  background-color: #71d58e;
+  display: block;
+  width: 0px;
+  height: 2px;
+  animation: slide 0.5s ease-in-out 1 forwards;
+}
+
+@keyframes slide {
+  100% {
+    width: 100%;
+  }
+}
+
+/**
+
+Animate Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Announcements Css
+
+*/
+
+div#announcements div.select,
+div#announcements input,
+div#announcements textarea {
+  width: 24.5vw;
+  margin-left: 10px;
+  margin-top: 10px;
+  display: block;
+}
+
+textarea {
+  padding: 8px 12px;
+  border-radius: 3px;
+  font-size: 1.1em;
+  border: 1px solid rgb(134, 134, 134);
+  width: 100%;
+}
+textarea:focus {
+  outline: none;
+}
+
+div#announcements div.selection-container {
+  display: flex;
+}
+
+div#school-content div#content div#announcements h4:last-of-type {
+  margin-top: 5px;
+}
+
+div#announcements button,
+div#absence button {
+  margin: 10px 0 0 10px;
+}
+
+div#announcements div#form-control {
+  margin-bottom: 0;
+}
+
+div#absence div.selection-container {
+  display: flex;
+}
+
+div#absence div.select,
+div#absence input {
+  width: 24.5vw;
+  margin-left: 10px;
+  margin-top: 10px;
+  display: block;
+}
+
+div#exam-schedule div#selection-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+div#exam-schedule div#selection-container div.selection-part {
+  flex-basis: 31%;
+}
+
+div#exam-schedule div#selection-container div.selection-part h4 {
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+div#exam-schedule div.exam-set {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+div#exam-schedule div.exam-view {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+
+div#exam-schedule div.exam-view p {
+  color: #fff;
+  font-size: 1.1em;
+}
+
+div#exam-schedule div.exam-set input {
+  flex-basis: 24%;
+}
+
+div#exam-schedule div.exam-set div.select {
+  flex-basis: 49%;
+}
+
+div.multiple-exam {
+  width: 70%;
+  margin: auto;
+  margin-top: 15px;
+}
+
+div.multiple-exam div.exams-number {
+  background-color: #71d58e;
+  padding: 15px 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+div.multiple-exam h4:last-of-type {
+  margin: 0;
+  margin-top: 0 !important;
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+div.multiple-exam div.exam-container {
+  padding: 10px;
+}
+div.multiple-exam div.exam-container:nth-child(odd) {
+  background-color: #71d58e;
+}
+div.multiple-exam div.exam-container:nth-child(even) {
+  background-color: rgb(212, 212, 212);
+}
+
+div.multiple-exam input[type="date"] {
+  margin-bottom: 10px;
+}
+
+div#exam-schedule button {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div#exam-schedule div.select-schedule {
+  margin: 0 10px;
+  width: 24.5vw;
+}
+
+div#school-content
+  div#content
+  div#exam-schedule
+  div.select-schedule
+  h4:last-of-type {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+div.schedule div.selection-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+div#school-content div#content div.schedule h4:last-of-type {
+  margin: 10px 0;
+}
+
+div.schedule div.selection-container div.selection-part {
+  flex-basis: 32%;
+}
+
+div.schedule div.schedule-table {
+  width: 70%;
+  margin: auto;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+div#school-content div#content div.schedule div.schedule-table h4 {
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  color: #fff;
+}
+
+div.schedule div.schedule-table h4.day {
+  background-color: #363636;
+}
+
+div.schedule div.schedule-table h4.time {
+  background-color: #71d58e;
+}
+
+div.schedule div.schedule-table div.assign-time {
+  background-color: rgb(212, 212, 212);
+  padding: 0px 10px 20px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+div#school-content
+  div#content
+  div.schedule
+  div.schedule-table
+  div.assign-time
+  div
+  h4 {
+  color: #000;
+}
+
+div.schedule div.schedule-table div.assign-time div {
+  flex-basis: 49%;
+}
+
+div.schedule button {
+  margin: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+div.marks-report-table {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 100px;
+  transform: translateY(40px);
+}
+
+div.marks-report-table div.semester-number {
+  padding: 10px;
+  background-color: #363636;
+  color: #fff;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+div.marks-report-table div.semester-number:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+div.marks-report-table div.subject-name {
+  padding: 10px;
+  background-color: #71d58e;
+  color: #fff;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+div.marks-report-table div.mark-data {
+  padding: 10px;
+  background-color: rgb(212, 212, 212);
+  color: #000;
+  text-align: center;
+  justify-content: space-between;
+  font-size: 1.1em;
+  border-bottom: 1px solid #fff;
+}
+
+div.marks-report-table div.mark-data:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+div.marks-report-table div.mark-data p.mark-date {
+  border-bottom: 1px solid #fff;
+  padding: 10px;
+}
+
+div.marks-report-table div.mark-data p:first-child {
+  margin-bottom: 10px;
+}
+
+div.print-container {
+  margin: auto;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  text-align: center;
+  padding: 20px;
+}
+
+div.marks-report button.print,
+button.print {
+  margin: auto;
+}
+
+div.teacher-classes div.select {
+  width: 24.5vw;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+div#school-content div#content div.teacher-classes h4 {
+  margin: 10px 0 10px 10px;
+}
+div#school-content div#content div.teacher-classes form button {
+  margin: 10px 0 10px 10px;
+}
+
+@media (max-width: 700px) {
+  div#exam-schedule div.multiple-exam {
+    width: 97%;
+  }
+  div.marks-report-table {
+    width: 96%;
+    transform: translateY(20px);
+  }
+  div.marks-report div.selection-container {
+    margin-top: 15px;
+  }
+  div.marks-report div.selection-container {
+    width: 100%;
+  }
+  div.teacher-classes div.select {
+    width: 93.5%;
+  }
+  div#school-content div#content div.teacher-classes form button {
+    margin: 10px auto;
+  }
+  div#exam-schedule div.select-schedule {
+    width: 97%;
+  }
+}
+
+div.student-announcements div.select {
+  width: 24.5vw;
+  margin-left: 10px;
+}
+
+div.view-announcements {
+  margin: 20px 0 10px 10px;
+  width: 70%;
+}
+
+div.view-announcements div.announcements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(212, 212, 212);
+  padding: 10px;
+  border-bottom: 1px solid #fff;
+}
+
+div.view-announcements div.announcements:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+div.view-announcements div.announcements:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+div.view-announcements div.announcements p {
+  flex-basis: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.view-announcements div.announcements button {
+  margin: 0;
+  height: auto;
+}
+
+div.specific-announcement {
+  border-radius: 10px;
+  margin: auto;
+  width: 70%;
+  transform: translateY(30px);
+}
+
+div.specific-announcement p {
+  background-color: rgb(212, 212, 212);
+  border-bottom: 1px solid #fff;
+}
+
+div.specific-announcement span {
+  font-size: 1em;
+  display: block;
+  margin: 0;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #363636;
+  color: #fff;
+  padding: 10px;
+}
+
+div.specific-announcement p span:last-child {
+  background-color: rgb(212, 212, 212);
+  color: #000;
+}
+
+div.specific-announcement span.at {
+  margin-bottom: 0;
+}
+
+div.specific-announcement a {
+  margin: auto;
+  text-decoration: none;
+  background-color: #71d58e;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  display: inline-block;
+  width: auto;
+  margin-left: 10px;
+  text-align: center;
+}
+
+div.specific-announcement div.at-container {
+  background-color: rgb(212, 212, 212);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: space-around;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+div.specific-announcement div.at-container button {
+  margin-top: 0;
+}
+
+div.specific-announcement div.at-container div {
+  margin: 10px 0;
+  flex-basis: 32%;
+  text-align: center;
+}
+
+div#teacher-announcements div.specific-annoncement {
+  margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+  div.view-announcements {
+    width: 97%;
+    margin: 20px auto 10px auto;
+  }
+  div.student-announcements div.select {
+    width: 97%;
+    margin: auto;
+  }
+  div.specific-announcement {
+    border-radius: 10px;
+    margin: auto;
+    width: 96%;
+    transform: translateY(15px);
+  }
+}
+
+div#exam-schedule div.multiple-exam div.exam-container:nth-child(even) p {
+  color: #000;
+}
+
+div#exam-schedule div.multiple-exam div.exam-container:nth-child(even) h4 {
+  color: #000;
+}
+
+/**
+
+Announcements Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Classroom Css
+
+*/
+
+ul.crud li {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 0;
+  padding-right: 20px;
+  font-size: 1.1em;
+  border-bottom: 3px solid #bdbdbd;
+  color: #363636;
+}
+
+ul.crud li a {
+  text-decoration: none;
+  color: #363636;
+}
+
+ul.crud li.active {
+  border-bottom: 3px solid #71d58e;
+}
+
+ul.crud {
+  margin-left: 10px;
+}
+
+div#classroom div#add-classrooms div.select {
+  width: 24.5vw;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+div#classroom div#add-classrooms h4 {
+  margin-left: 10px;
+}
+
+div#classroom div#add-classrooms input {
+  width: 24.5vw;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+div#add-classrooms div#classrooms-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  align-items: flex-start;
+}
+
+div#add-classrooms div#classrooms-container div#form-control {
+  margin-bottom: 0;
+}
+
+div#add-classrooms div#classroom-form {
+  border: 1px solid #bdbdbd;
+  border-left: none;
+  border-radius: 10px;
+  padding-right: 10px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  flex-basis: 31%;
+}
+
+div#add-classrooms button {
+  margin-top: 0;
+  background-color: #363636;
+  margin-bottom: 10px;
+  width: 16.5%;
+  padding: 0 5px;
+}
+
+div#add-classrooms div#classroom-form div#form {
+  flex-basis: 80%;
+  padding: 10px 0;
+}
+
+div#add-classrooms div.error {
+  margin-left: 10px;
+}
+
+div#add-classrooms div#classroom-form div.error {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+div#add-classrooms div#classroom-form input {
+  margin: 0;
+  width: 100%;
+}
+
+div#add-classrooms div#classroom-form input:first-of-type {
+  width: 100%;
+}
+
+div#add-classrooms div#classroom-form div#form-control:first-of-type div.error {
+  margin-bottom: 10px;
+}
+
+div#add-classrooms div#classroom-form div#title {
+  background-color: #71d58e;
+  text-align: center;
+  color: #fff;
+  flex-basis: 20%;
+  margin-right: 10px;
+  position: relative;
+}
+
+div#add-classrooms div#classroom-form div#title span {
+  font-size: 1.1em;
+  position: absolute;
+  padding: 0;
+  padding: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div#add-classrooms button {
+  margin-left: 10px;
+}
+
+div#get-classes div.select {
+  width: 24.5vw;
+  margin: 10px 0 0 10px;
+}
+
+div#get-classrooms div.select {
+  width: 24.5vw;
+  margin: 20px 0 0 10px;
+}
+
+div#get-classrooms p {
+  margin-bottom: 10px;
+}
+
+div#get-classrooms p:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  div#add-classrooms div#classroom-form {
+    flex-basis: 30.7%;
+  }
+}
+
+@media (max-width: 800px) {
+  div#add-classrooms div#classroom-form {
+    flex-basis: 30%;
+  }
+}
+
+@media (max-width: 700px) {
+  div#add-classrooms div#classroom-form {
+    flex-basis: 29%;
+  }
+}
+
+@media (max-width: 685px) {
+  div#add-classrooms div#classroom-form {
+    flex-basis: 46%;
+  }
+  div#add-classrooms div#classroom-container {
+    justify-content: space-between;
+  }
+  div#classroom div#add-classrooms div.select {
+    width: 30vw;
+  }
+  div#classroom div#add-classrooms input {
+    width: 30vw;
+  }
+}
+
+/**
+
+Classroom Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Common Css
+
+*/
+
+div#add-common a#back {
+  display: none;
+}
+
+div#add-common form {
+  margin: 10px 0 0 10px;
+}
+
+div#add-common h4 {
+  margin-top: auto;
+}
+
+div#add-common form i {
+  font-size: 1em;
+}
+
+div#add-common {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+div#add-common div#common-pic {
+  flex-basis: 50%;
+  object-fit: contain;
+  position: relative;
+}
+
+div#school-content div#content div#addition h4 {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+div#addition ul.crud {
+  margin-bottom: 0px;
+}
+
+div#school-content div#content div#add-common form button {
+  margin-left: 0;
+  margin: auto;
+}
+
+div#add-common div#common-pic img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+
+div#add-common div#common-info {
+  flex-basis: 40%;
+}
+
+div#add-common ul.paginate {
+  text-align: center;
+}
+
+div#add-common ul.paginate li {
+  border-right: 1px solid #bdbdbd;
+  border-top: 1px solid #bdbdbd;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+div#add-common div#common-pic div#image-container {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  div#add-common div#common-pic div#image-container {
+    height: 80%;
+    top: 65%;
+  }
+}
+
+@media (max-width: 600px) {
+  div#add-common div#common-pic div#image-container {
+    height: 80%;
+    top: 60%;
+  }
+}
+
+/**
+
+Common Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Dashboard Css
+
+*/
+
+div#school-dashboard h3 {
+  color: #fff;
+  padding: 20px;
+  padding-left: 20px;
+  background-color: #71d58e;
+}
+
+div#school-dashboard div#inner {
+  padding: 10px;
+}
+
+div#school-dashboard div#inner div#year button {
+  width: 100%;
+  font-size: 0.8em;
+  height: auto;
+  margin-top: 10px;
+}
+
+div#school-dashboard h3 i {
+  font-size: 1.2em;
+}
+
+div#school-dashboard ul li {
+  list-style: none;
+  background-color: #282424;
+  display: block;
+  color: #fff;
+  padding-left: 10px;
+  min-width: 80px;
+}
+
+div#school-dashboard ul li.active,
+div#school-dashboard ul a.active li {
+  color: #71d58e;
+}
+
+div#school-dashboard ul a {
+  text-decoration: none;
+  display: block;
+}
+
+div#school-dashboard ul a li {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  padding: 20px;
+  padding-left: 10px;
+  color: #fff;
+  font-size: 1.1em;
+}
+
+div#school-dashboard ul a li span {
+  margin-left: 5px;
+  font-size: 1em;
+}
+
+div.teacher-years div.select:last-child {
+  margin-top: 20px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.657);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.788);
+}
+
+/**
+
+Dashboard Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Form Css
+
+*/
+
+div#login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 70%;
+  max-width: 800px;
+}
+
+div#login div#pic-section img {
+  width: 100%;
+  height: 100%;
+}
+
+div#login div#log-container {
+  flex-basis: 40%;
+  position: relative;
+  padding-top: 20px;
+}
+
+div#login div#log-container #log-section {
+  position: relative;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div#login div#pic-section {
+  flex-basis: 55%;
+  position: relative;
+  text-align: center;
+}
+
+div#login div#log-section form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+div#form-control {
+  margin-bottom: 15px;
+}
+
+div#form-control div.error {
+  text-align: left;
+  color: red;
+  font-size: 0.8em;
+}
+
+input {
+  padding: 8px 12px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  border: 1px solid rgb(134, 134, 134);
+  width: 100%;
+}
+
+.password {
+  padding-right: 40px;
+}
+
+input:focus {
+  outline: none;
+}
+
+h1 {
+  color: #71d58e;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+button,
+div#login a {
+  margin-top: 20px;
+  padding: 8px 12px;
+  background-color: #71d58e;
+  font-size: 1em;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+button {
+  height: 39px;
+}
+
+div#login a {
+  display: block;
+  margin-top: 15px;
+  background-color: white;
+  color: #71d58e;
+  border: 1px solid #71d58e;
+  text-decoration: none;
+  text-align: center;
+}
+
+div#eye-container {
+  position: relative;
+}
+
+div.eye {
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  font-size: 1.2em;
+}
+
+@media (max-width: 600px) {
+  div#login div#pic-section {
+    display: none;
+  }
+
+  div#login div#log-container {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
+
+/**
+      Sign up 
+  */
+
+div#signup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+}
+
+div#signup ul {
+  list-style: none;
+  text-align: center;
+  margin-top: 5px;
+}
+
+div#signup ul li {
+  display: inline-block;
+  font-size: 1.1em;
+  cursor: pointer;
+  position: relative;
+  margin-right: 15px;
+}
+
+div#signup ul li a {
+  text-decoration: none;
+  padding: 10px 0;
+  color: #000;
+}
+
+div#signup #sign-section {
+  flex-basis: 40%;
+}
+
+div#signup #sign-section form {
+  margin-top: 20px;
+}
+
+div#signup #sign-pic-section {
+  flex-basis: 60%;
+  position: relative;
+}
+
+div#signup #sign-pic-section #image-container {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
+}
+
+div#signup #sign-pic-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+div#signup #sign-section button {
+  width: 100%;
+  margin-top: 0;
+}
+
+div#signup #sign-section a#back {
+  display: block;
+  margin-top: 15px;
+  color: #71d58e;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+div#signup ul.paginate li {
+  margin: 0;
+}
+
+form div.select {
+  margin-bottom: 15px;
+}
+div#signup ul.paginate {
+  margin-top: 15px;
+}
+
+@media (max-width: 700px) {
+  div#signup #sign-pic-section {
+    display: none;
+  }
+
+  div#signup #sign-section {
+    flex-basis: 100%;
+  }
+}
+
+/**
+
+Form Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Info Css
+
+*/
+
+div#info-container {
+  margin-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+div#info-container div.info {
+  border: 1px solid #bdbdbd;
+  border-left: none;
+  border-radius: 10px;
+  margin: 0 15px 15px 0;
+  flex-basis: 31%;
+  display: flex;
+}
+
+div#info-container div.info div.title {
+  background-color: #71d58e;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  flex-basis: 15%;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+div#info-container div.info div.title i {
+  margin-right: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div#info-container div.info div.element {
+  padding: 10px;
+  flex-basis: 85%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+h1#empty {
+  margin-top: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div#info-container div.info div.element a {
+  color: #4f9463;
+  margin-bottom: 10px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div#info-container div.info div.element p {
+  margin-bottom: 10px;
+}
+
+div#info-container div.info div.element p:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  div#info-container div.info {
+    flex-basis: 37.7%;
+  }
+}
+
+@media (max-width: 800px) {
+  div#info-container div.info {
+    flex-basis: 30%;
+  }
+}
+
+@media (max-width: 700px) {
+  div#info-container div.info {
+    flex-basis: 29%;
+  }
+}
+
+@media (max-width: 685px) {
+  div#info-container div.info {
+    flex-basis: 46%;
+  }
+  div#info-container {
+    justify-content: space-between;
+  }
+}
+
+/**
+
+Info Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Marks Css
+
+*/
+div#marks table th input {
+  margin: auto;
+  display: inline-block;
+  font-size: 0.8em;
+  width: 90%;
+}
+
+div#marks table th input.red {
+  width: 10%;
+}
+
+div#marks div.select:first-of-type {
+  margin-bottom: 0;
+}
+
+div#marks h4 {
+  margin: 0;
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+div#school-content div#content div#marks h4:last-of-type {
+  margin-top: 10px;
+  margin-left: 0;
+}
+
+div#school-content div#content div#marks h4 {
+  margin-top: 10px;
+}
+
+div#marks div#selection-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+div#marks div#selection-container div.selection-part {
+  flex-basis: 31.8%;
+}
+
+div#marks div.exam-date {
+  width: 33%;
+  margin: auto;
+}
+
+div#marks table,
+div.sort-table table {
+  margin: auto;
+  width: 70%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+div#marks table th,
+div.sort-table table th {
+  background-color: #71d58e;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.1em;
+  width: 33%;
+  cursor: pointer;
+}
+
+div#marks table th div.error {
+  font-weight: normal;
+  font-size: 0.7em;
+}
+
+div#marks table td,
+div.sort-table table tr td {
+  padding: 10px;
+  text-align: center;
+  width: 33%;
+}
+
+div#marks table th:first-child,
+div.sort-table table th:first-child {
+  border-top-left-radius: 10px;
+}
+
+div#marks table th:last-child,
+div.sort-table table th:last-child {
+  border-top-right-radius: 10px;
+}
+
+div#marks table tr,
+div.sort-table table tr {
+  font-size: 1.1em;
+}
+
+div#marks table tr:nth-child(odd),
+div.sort-table table tr:nth-child(odd) {
+  background-color: rgb(212, 212, 212);
+}
+
+div#marks table tr:last-of-type,
+div.sort-table table tr:last-of-type {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+div#marks table tr:last-of-type td:last-of-type,
+div.sort-table table tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 10px;
+}
+
+div#marks table tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 10px;
+}
+
+div#marks ul.paginate {
+  margin: auto;
+  display: block;
+  text-align: center;
+  margin: 20px;
+  flex-basis: 33%;
+}
+
+div[role="alert"] {
+  line-height: 30px;
+}
+
+div#marks i.sort {
+  font-size: 1.1em;
+  margin-left: 5px;
+}
+
+div#marks div.bottom-container {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  justify-content: space-between;
+  margin-bottom: 200px;
+}
+
+div#marks div.bottom-container p {
+  flex-basis: 33%;
+}
+
+div#marks div.bottom-container button {
+  flex-basis: 20%;
+  height: auto;
+}
+
+ul.paginate li.rest {
+  color: #71d58e;
+}
+
+div#marks div.bottom-container .select {
+  flex-basis: 25%;
+  margin-top: 20px;
+  background-color: #71d58e;
+}
+
+div#marks button#load-marks {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+
+div.sort-table table th.straight {
+  border-radius: 0;
+}
+
+button.sort {
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+}
+
+div.marks-report div.selection-container {
+  display: flex;
+  padding: 0 10px;
+  justify-content: space-between;
+  width: 80%;
+}
+
+div.marks-report div.selection-container div.select,
+div.marks-report div.selection-container input,
+div.marks-report div.selection-container button {
+  flex-basis: 32%;
+}
+
+div.marks-report button {
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  div#marks table {
+    width: 90%;
+  }
+  div#marks div#selection-container div.selection-part {
+    flex-basis: 45%;
+  }
+  div#marks div.bottom-container {
+    width: 90%;
+  }
+}
+
+/**
+
+Marks Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Paginate Css
+
+*/
+
+ul.paginate li {
+  display: inline-block;
+  padding: 10px 15px;
+  border-right: 1px solid #eee;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  color: #282424;
+  cursor: pointer;
+  text-align: center;
+}
+
+ul.paginate li.active {
+  background-color: #71d58e;
+  color: #fff;
+}
+
+ul.paginate li:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+ul.paginate li:first-child {
+  border-radius: 5px 0 0 5px;
+  border-left: 1px solid #eee;
+}
+
+ul.paginate {
+  border-radius: 5px;
+}
+
+div#common-info ul.paginate {
+  margin-top: 10px;
+}
+
+/**
+
+Paginate Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Public Css
+
+*/
+
+div#public-content input {
+  width: 24.5vw;
+  margin-left: 10px;
+}
+div#public-content div.select {
+  margin-left: 10px;
+}
+
+div#school-content div#content div#public-content h4 {
+  margin: 10px 0 10px 10px;
+}
+
+div.article {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid hsl(137, 54%, 64%);
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+div.article div.article-icon {
+  color: #71d58e;
+  display: block;
+  margin-bottom: 10px;
+}
+
+div#public-content div.article div.input-container {
+  padding: 10px;
+}
+
+div#public-content div.article input {
+  margin: 0;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 100%;
+}
+
+div.content-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div#public-content div.content-container div.content-part {
+  flex-basis: 49%;
+}
+
+div#public-content button {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+div#public-content textarea {
+  margin-bottom: 10px;
+}
+
+div#public-content textarea:last-child {
+  margin-bottom: 0;
+}
+
+div#get-content div.content-part {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div#get-content div.content-part div.article {
+  flex-basis: 48%;
+}
+
+div#get-content div.content-part div.article p {
+  margin-bottom: 10px;
+}
+
+div#get-content div.content-part div.article p:last-child {
+  margin-bottom: 0;
+}
+
+div#get-content i {
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+div#public-content div.edit {
+  margin-right: 10px;
+}
+
+div#public-content div.edit button {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+div.delete-content div.article {
+  border: 1px solid #e74c3c;
+}
+
+div.delete-content i {
+  color: #e74c3c;
+}
+
+div.delete-content div.select {
+  margin: 10px 0 0 10px;
+  width: 24.5vw;
+}
+
+div.delete-content div.select i {
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  div#public-content input {
+    width: 96vw;
+    margin-left: 10px;
+  }
+  div#public-content button {
+    display: block;
+    margin: 10px auto;
+  }
+  div#get-content div.content-part div.article {
+    flex-basis: 46%;
+  }
+}
+
+div#public-school-content {
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+}
+
+div#public-school-content p.school-name {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #fff;
+  font-size: 8em;
+  letter-spacing: 0.05em;
+  margin-left: 13vw;
+}
+
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+div#public-school-content p.school-name:hover {
+  animation: move 1s ease-in-out 0s 1;
+}
+
+div.content {
+  padding: 20px 10px;
+}
+
+div.content h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 1.4em;
+}
+
+div.content article {
+  text-align: center;
+  margin-bottom: 10px;
+  line-height: 1.7em;
+}
+
+div.content:nth-child(even) {
+  color: #000;
+  background-color: #eee;
+}
+
+div.content:nth-child(odd) {
+  background-color: #fff;
+}
+
+div.public-school-info {
+  background-color: #eee;
+}
+
+div.public-school-info div.content-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 10px 10px 10px;
+  background-color: #363636;
+}
+
+div.public-school-info div.content-container div.secondary {
+  flex-basis: 32%;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #fff;
+  border: 1px solid #71d58e;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+div.public-school-info div.content-container div.secondary i {
+  color: #71d58e;
+}
+
+div.public-school-info div.content-container div.secondary p {
+  margin-top: 10px;
+  color: #fff;
+  line-height: 1.7em;
+}
+
+footer {
+  background-color: #71d58e;
+  padding: 20px;
+}
+
+footer h2 {
+  color: #fff;
+  text-align: center;
+}
+
+footer section.contact {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+footer section.contact div {
+  flex-basis: 32%;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+}
+
+footer section.contact a {
+  flex-basis: 32%;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+}
+
+footer section.contact i {
+  color: #4267b2;
+  margin-right: -3px;
+}
+
+footer section.contact div p {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  div#public-school-content p.school-name {
+    font-size: 5em;
+  }
+}
+
+/**
+
+Public Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Schedule Css
+
+*/
+
+div.common-schedule div.select {
+  width: 24.5vw;
+  margin-left: 10px;
+}
+
+div#school-content div#content div.common-schedule h4 {
+  margin: 0;
+}
+
+div#school-content div#content div.common-schedule h4.semester {
+  margin: 0 0 10px 10px;
+}
+
+div.common-schedule-table {
+  display: block;
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+div.common-schedule-table h4 {
+  text-align: center;
+}
+
+div.common-schedule-table p {
+  text-align: center;
+}
+
+div#school-content div#content div.common-schedule-table h4 {
+  background-color: #71d58e;
+  padding: 10px;
+  color: #fff;
+}
+
+div.common-schedule-table h4:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+div.common-schedule-table p {
+  background-color: rgb(212, 212, 212);
+  padding: 10px;
+}
+
+div.common-schedule-table p.details {
+  border-bottom: 1px solid #fff;
+  padding-top: 10px;
+}
+
+div.common-schedule-table p.details:last-of-type {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+div.view-schedule div.selection-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+div#school-content div#content div.view-schedule h4 {
+  margin: 10px 0 10px 0;
+}
+
+div#school-content div#content div.view-schedule div.common-schedule-table h4 {
+  margin: 0;
+}
+
+div.view-schedule div.selection-container div {
+  flex-basis: 32%;
+}
+
+div.view-schedule button {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+}
+
+div#school-content div#content div.common-schedule-table h4 {
+  margin: 0;
+}
+
+div.teacher-schedule {
+  margin-top: 20px;
+}
+
+div.teacher-selection div.select {
+  margin-left: 10px;
+  width: 24.5vw;
+}
+
+div.payments table {
+  width: 70%;
+  margin: 10px auto;
+}
+div.payments table td {
+  padding: 10px;
+  background-color: rgb(212, 212, 212);
+  text-align: center;
+}
+
+div.payments table th {
+  background-color: #71d58e;
+  padding: 10px;
+  color: #fff;
+}
+div.payments table th:first-child {
+  border-top-left-radius: 10px;
+}
+div.payments table th:last-child {
+  border-top-right-radius: 10px;
+}
+div.payments table tr.calculation th {
+  border-radius: 0 0 0 0;
+}
+div.payments table tr.remaining th {
+  border-radius: 0 0 0 0;
+  border-bottom-left-radius: 10px;
+}
+div.payments table tr.remaining td {
+  border-bottom-right-radius: 10px;
+}
+div#student-fees div.payments table {
+  transform: translateY(30px);
+}
+
+@media (max-width: 700px) {
+  div.common-schedule-table {
+    width: 97%;
+  }
+  div.common-schedule div.select {
+    width: 96%;
+    margin-left: 10px;
+  }
+  div.teacher-schedule {
+    margin-top: 20px;
+  }
+  div.teacher-selection div.select {
+    width: 96%;
+  }
+  div#absence div.select,
+  div#absence input {
+    width: 48%;
+  }
+  div#absence div.select {
+    margin-right: 10px;
+  }
+  div#absence button {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+  }
+  div.payments table {
+    width: 96%;
+    margin: 10px auto;
+  }
+  div#student-fees div.payments table {
+    transform: translateY(0px);
+  }
+}
+
+/**
+
+Schedule Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+School Css
+
+*/
+
+div#school-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+div#school-container label#sidebar {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  top: 25px;
+  left: 17px;
+}
+
+div#school-container i {
+  font-size: 1.2em;
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+}
+
+div#school-container input#check-dashboard {
+  display: none;
+}
+
+div#school-dashboard {
+  flex-basis: 20%;
+  min-width: 220px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #282424;
+  max-height: 100vh;
+  overflow-y: scroll;
+  z-index: 10;
+}
+
+div#school-content {
+  flex-basis: 80%;
+  width: 100vw;
+  padding-bottom: 20px;
+  background-color: #eee;
+  position: relative;
+}
+
+div#school-content div#content {
+  margin-top: 65px;
+}
+
+div#school-content div#content h4 {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+div#school-content div#content h4:last-of-type {
+  margin-top: 25px;
+}
+
+div#school-content button.logout {
+  float: right;
+  margin-right: 15px;
+}
+
+div#school-content button.small-logout {
+  float: right;
+  margin: 0;
+  height: auto;
+  display: none;
+  padding: 0;
+}
+
+div#year {
+  padding: 0 5px;
+}
+
+div#year h4 {
+  color: #fff;
+  margin: 10px;
+  margin-left: 4px;
+}
+
+div#school-content div#content div#grades {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-left: 10px;
+}
+
+div#school-content div#content form button {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+div#school-content div#content div#grades #grade input {
+  width: 30px;
+}
+
+div#school-content div#content div#grades #grade.active {
+  background-color: #2d9c4d;
+  color: #fff;
+}
+
+div#school-content div#content div#grades #grade {
+  background-color: #282424;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 1.2em;
+  color: #fff;
+  flex-basis: 22%;
+  margin: 0 10px 10px 0;
+  padding: 20px;
+}
+
+div#school-content h3 {
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  padding-left: 70px;
+  background-color: #71d58e;
+  display: none;
+}
+
+div#school-content h3 i {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+div#school-info {
+  width: 50vw;
+}
+
+div#school-content div#content div#school-info h4 {
+  margin: 0;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+div#school-info input {
+  margin-left: 10px;
+}
+div#school-info button {
+  margin-top: 0;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+div#school-info div.error {
+  margin-left: 10px;
+}
+div#school-info div#days {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+div#school-info div#days div.item-day {
+  flex-basis: 23%;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: #282424;
+  margin-bottom: 10px;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+div#school-info div#days div.item-day.active {
+  background-color: #2d9c4d;
+}
+
+div.fees div.select,
+div.fees input {
+  width: 24.5vw;
+  margin: 10px 0 0 10px;
+}
+
+div.fees button {
+  display: block;
+  margin: 0;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  div#school-info div#days div.item-day {
+    flex-basis: 30%;
+  }
+}
+@media (max-width: 800px) {
+  div#school-content div#content div#grades #grade {
+    flex-basis: 46%;
+  }
+}
+
+div#notfound {
+  width: 100%;
+  height: 90vh;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div#notfound img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  div#school-content button.small-logout {
+    display: block;
+  }
+  div#school-content button.logout {
+    display: none;
+  }
+  div#school-dashboard {
+    display: none;
+  }
+  div#school-content {
+    flex-basis: 100%;
+    min-height: 100vh;
+    padding: 0;
+  }
+  div#school-content h3 {
+    display: block;
+  }
+  div#school-container label#sidebar {
+    z-index: 10000;
+    display: block;
+  }
+  div#school-container input#check-dashboard:checked ~ div#school-dashboard {
+    display: block;
+    width: 100%;
+    top: 65px;
+    height: auto;
+    position: absolute;
+  }
+  div#school-container input#check-dashboard:checked ~ div#school-dashboard h3 {
+    display: none;
+  }
+  div#school-content div#content {
+    margin-top: 0;
+    min-height: 100vh;
+  }
+  div#school-content div#content div#grades #grade {
+    flex-basis: 100%;
+  }
+  div#school-content div#content div#grades {
+    padding-right: 10px;
+  }
+  div#school-content div#content h4 {
+    margin-top: 30px;
+  }
+  div#school-content div#content div#year {
+    width: 40vw;
+  }
+  div#school-content div#content form button {
+    margin: 20px auto;
+    margin-bottom: 30px;
+    display: block;
+    width: 70%;
+  }
+  div#school-info {
+    width: 96%;
+    margin-top: 10px;
+  }
+  div#school-info div#days {
+    justify-content: space-between;
+  }
+  div#school-info div#days div.item-day {
+    flex-basis: 49%;
+    margin-right: 0;
+  }
+  div.fees div.select,
+  div.fees input {
+    width: 96%;
+  }
+
+  div.fees button {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+  }
+}
+
+/**
+
+School Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Selection Css
+
+*/
+
+div.select div i {
+  display: inline-block;
+}
+
+div.select div.title {
+  padding: 10px;
+  overflow: auto;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: -2px;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.select div.title span {
+  font-size: 1em;
+}
+
+div.select {
+  position: relative;
+  background-color: #363636;
+  color: #fff;
+  border-radius: 5px;
+}
+
+div.select div.options div {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+div.select div.options {
+  position: absolute;
+  width: 100%;
+  background-color: #363636;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  max-height: 41vh;
+  overflow-y: scroll;
+  z-index: 1000;
+}
+
+/**
+
+Selection Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Sort Students Css
+
+*/
+div#sort-students div.select {
+  margin-left: 10px;
+  width: 24.5vw;
+}
+
+div#sort-students div#sort-form-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0 0 10px;
+}
+
+div#sort-students div.sort-form {
+  display: flex;
+  border: 1px solid #bdbdbd;
+  border-left: none;
+  border-radius: 10px;
+  padding-right: 10px;
+  position: relative;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  flex-basis: 27%;
+}
+
+div#sort-students div.sort-form div.sort-title {
+  background-color: #71d58e;
+  text-align: center;
+  color: #fff;
+  flex-basis: 20%;
+  margin-right: 10px;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-left: 10px;
+}
+
+div#sort-students div.sort-form div.form-section {
+  flex-basis: 80%;
+}
+
+div#sort-students div.sort-form div.form-section p {
+  margin: 15px 0;
+  text-align: center;
+}
+
+div#sort-students div.sort-form div.form-section div.select {
+  width: 80%;
+  margin: 0;
+  margin: 15px auto;
+  background-color: #71d58e;
+}
+
+div#sort-students div.sort-form div.sort-title i {
+  display: block;
+  font-size: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-right: 0;
+  font-size: 1.2em;
+}
+
+div#sort-students button.sort {
+  margin-left: 10px;
+  margin-top: 20px;
+  display: block;
+  width: 20%;
+  background-color: #363636;
+}
+
+div.selection-sort {
+  display: flex;
+  width: 50vw;
+  margin-left: 10px;
+  justify-content: space-between;
+}
+
+div.selection-sort div.selection-sort-part {
+  flex-basis: 49%;
+}
+
+/**
+
+Sort Students Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Student's Profile Css
+
+*/
+
+table.profile {
+  border-collapse: collapse;
+  margin: 100px auto;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  width: 90%;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
+}
+
+table.profile th,
+table.profile td {
+  padding: 12px 15px;
+}
+
+table.profile thead th {
+  background-color: #71d58e;
+  color: #ffffff;
+  text-align: left;
+  font-size: 1.5em;
+  border-radius: 10px 10px 0px 0px;
+}
+table.profile tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+table.profile tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+table.profile tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+  border-radius: 10px 10px 0px 0px;
+}
+
+@media (max-width: 700px) {
+  table.profile {
+    width: 99%;
+    margin: 100px auto;
+  }
+}
+
+/**
+
+Student's Profile Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Students Css
+
+*/
+
+div#get-students div#selection-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50vw;
+}
+
+div#get-students div.selection-part {
+  flex-basis: 40%;
+  margin: 0 0 10px 10px;
+}
+
+div#get-students div.selection-part p {
+  padding-left: 10px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+div#get-students div.selection-part input {
+  height: 40px;
+}
+
+div.selection-part p.green {
+  background-color: #71d58e;
+}
+
+div.selection-part p.red {
+  background-color: #e74c3c;
+}
+
+div#student-info {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #e74c3c;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+div.layoff {
+  margin-top: 120px;
+}
+
+div#school-content div#content div.layoff h4 {
+  margin-left: 0;
+}
+
+div#student-info button {
+  background-color: #e74c3c;
+}
+
+div#layoff .select,
+div#layoff input {
+  width: 24.5vw;
+  margin-left: 10px;
+}
+
+div#layoff .select {
+  margin-bottom: 10px;
+}
+
+div#layoff div.info p {
+  text-align: center;
+  font-size: 1em;
+}
+
+div#layoff div.info button {
+  display: block;
+  margin: auto;
+  height: auto;
+  margin-top: 10px;
+  background-color: #e74c3c;
+}
+
+div#layoff div.info div.title {
+  background-color: #e74c3c;
+}
+
+div.student-teachers div.select {
+  margin-left: 10px;
+  width: 24.5vw;
+}
+
+div#school-content div#content div.student-teachers h4:last-of-type {
+  margin-top: 0px;
+}
+
+@media (max-width: 900px) {
+  div#get-students div#selection-container {
+    width: 100%;
+  }
+  div#get-students div.selection-part {
+    flex-basis: 43%;
+  }
+  div#get-students div#info-container div.info {
+    flex-basis: 45%;
+  }
+}
+
+@media (max-width: 700px) {
+  div#get-students div#selection-container {
+    width: 100vw;
+  }
+  div#get-students div.selection-part {
+    flex-basis: 47%;
+  }
+  div.student-teachers div.select {
+    margin-left: 10px;
+    width: 96%;
+  }
+
+  div#school-content div#content div.student-teachers h4:last-of-type {
+    margin-top: 10px;
+  }
+}
+
+/**
+
+Students Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Subject's Info Css
+
+*/
+
+div#info-container {
+  margin-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+div#info-container div.info {
+  border: 1px solid #bdbdbd;
+  border-left: none;
+  border-radius: 10px;
+  margin: 0 15px 15px 0;
+  flex-basis: 31%;
+  display: flex;
+}
+
+div#info-container div.info div.title {
+  background-color: #71d58e;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  flex-basis: 15%;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+div#info-container div.info div.title i {
+  margin-right: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div#info-container div.info div.element {
+  padding: 10px;
+  flex-basis: 85%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+h1#empty {
+  margin-top: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div#info-container div.info div.element a {
+  color: #4f9463;
+  margin-bottom: 10px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div#info-container div.info div.element p {
+  margin-bottom: 10px;
+}
+
+div#info-container div.info div.element p:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  div#info-container div.info {
+    flex-basis: 37.7%;
+  }
+}
+
+@media (max-width: 800px) {
+  div#info-container div.info {
+    flex-basis: 30%;
+  }
+}
+
+@media (max-width: 700px) {
+  div#info-container div.info {
+    flex-basis: 29%;
+  }
+}
+
+@media (max-width: 685px) {
+  div#info-container div.info {
+    flex-basis: 46%;
+  }
+  div#info-container {
+    justify-content: space-between;
+  }
+}
+
+/**
+
+Subject's Info Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Teacher Css
+
+*/
+
+div#get-teachers div#selection-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50vw;
+}
+
+div#get-teachers div.selection-part {
+  flex-basis: 40%;
+  margin: 0 0 10px 10px;
+}
+
+div#get-teachers div.selection-part p {
+  padding-left: 10px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  color: #fff;
+}
+div.selection-part p.green {
+  background-color: #71d58e;
+}
+
+div.selection-part p.red {
+  background-color: #e74c3c;
+}
+
+div#student-info {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #e74c3c;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+div.layoff {
+  margin-top: 120px;
+}
+
+div#school-content div#content div.layoff h4 {
+  margin-left: 0;
+}
+
+div#student-info button {
+  background-color: #e74c3c;
+}
+
+div#layoff .select,
+div#layoff input {
+  width: 24.5vw;
+  margin-left: 10px;
+}
+
+div#layoff .select {
+  margin-bottom: 10px;
+}
+
+div#layoff div.info p {
+  text-align: center;
+  font-size: 1em;
+}
+
+div#layoff div.info button {
+  display: block;
+  margin: auto;
+  height: auto;
+  margin-top: 10px;
+  background-color: #e74c3c;
+}
+
+div#layoff div.info div.title {
+  background-color: #e74c3c;
+}
+
+.selection-part1 input {
+  margin: 20px 0px 20px 5px;
+  width: 30vw;
+}
+
+@media (max-width: 900px) {
+  div#get-teachers div#selection-container {
+    width: 100%;
+  }
+  div#get-teachers div.selection-part {
+    flex-basis: 43%;
+  }
+  div#get-teachers div#info-container div.info {
+    flex-basis: 45%;
+  }
+}
+
+@media (max-width: 700px) {
+  div#get-teachers div#selection-container {
+    width: 100vw;
+  }
+  div#get-teachers div.selection-part {
+    flex-basis: 47%;
+  }
+}
+
+/**
+
+Teacher Css
+
+*/
+
+/*_____________________________*/
+
+/**
+
+Teacher's Info Css
+
+*/
+
+table.teacher-info {
+  width: 99%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+table.teacher-info th {
+  background-color: #71d58e;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.1em;
+}
+
+table.teacher-info td {
+  text-align: center;
+  background-color: #282424;
+  cursor: pointer;
+}
+
+table.teacher-info td.active {
+  background-color: #71d58e;
+}
+
+/**
+
+Teacher's Info Css
+
+*/
+
+/**
+  Promote Students
+*/
+
+div.promote-std table {
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+div.promote-std table th {
+  background-color: #282424;
+  color: #fff;
+  padding: 10px;
+  width: 50%;
+}
+
+div.promote-std table th:first-child {
+  border-top-left-radius: 10px;
+}
+
+div.promote-std table th:last-child {
+  border-top-right-radius: 10px;
+}
+
+div.promote-std table th:last-child button {
+  margin: 0;
+}
+
+div.promote-std table td {
+  text-align: center;
+  background-color: #282424;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+div.promote-std table tr:last-child td {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+div.promote-std button.promote {
+  margin: 10px auto;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  div.promote-std table {
+    width: 97%;
+    margin: auto;
+    margin-top: 10px;
+  }
+}
+
+/*
+
+  Home Page
+
+*/
+
+div#home header {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div#home section.logo img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+div#home header div.welcome p {
+  color: #fff;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 3.5em;
+  letter-spacing: 0.07em;
+  animation: move 1s ease-in-out 0s 1;
+  padding: 20px;
+}
+
+div#home header div.welcome p:hover {
+  animation: move 1s ease-in-out 0s infinite;
+}
+
+div#home header div.welcome div.auth {
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 25px;
+}
+
+div#home header div.welcome div.auth a {
+  color: #282424;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 12px 60px;
+  border-radius: 120px;
+  background-color: red;
+}
+
+div#home header div.welcome div.auth a:first-child {
+  background-color: #71d58e;
+  margin-right: 30px;
+}
+
+div#home header div.welcome div.auth a:last-child {
+  background-color: #282424;
+  color: #71d58e;
+}
+
+div#home div#main div.content-area {
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+}
+
+div#home div#main div.content-area div.content {
+  flex-basis: 40%;
+}
+
+div#home div#main div.content-area div.side {
+  flex-basis: 50%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+div#home div#main div.content-area div.side img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+div#home div#main div.content-area div.content h2 {
+  text-align: left;
+  margin-left: 50px;
+}
+
+div#home div#main div.content-area div.content ol {
+  list-style: inside;
+  list-style-type: decimal;
+  margin-left: 50px;
+}
+
+div#home div#main div.content-area div.content ol li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+div#home div#main div.services {
+  display: flex;
+  padding: 30px;
+  justify-content: space-around;
+  background-color: #eee;
+  flex-wrap: wrap;
+}
+
+div#home div#main div.services div.service {
+  flex-basis: 33%;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+div#home div#main div.services div.service h2 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+div#home div#main div.services div.service i {
+  font-size: 1.5em;
+}
+
+div#home div#main div.developers {
+  display: flex;
+  padding: 30px;
+  padding-bottom: 10px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #eee;
+}
+
+div#home div#main div.developers div.developer {
+  flex-basis: 19%;
+  text-align: center;
+  background-color: #ddd;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+div#home div#main div.developers div.developer:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 5px #282424;
+}
+
+div#home div#main div.developers div.developer img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+div#home div#main div.developers div.developer p {
+  margin-top: 10px;
+}
+
+div#home div#main div.developers div.developer a {
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+div#home div#main div.developers div.developer a:first-of-type i {
+  text-decoration: none;
+  color: #db4437;
+  font-size: 1.5em;
+}
+
+div#home div#main div.developers div.developer a:last-of-type i {
+  text-decoration: none;
+  color: #4267b2;
+  font-size: 1.5em;
+}
+
+div#home footer {
+  text-align: center;
+  color: #fff;
+  background-color: #282424;
+}
+
+div#home p {
+  line-height: 1.4em;
+}
+
+div#home div#main div.registered-school {
+  display: flex;
+  padding: 30px;
+  padding-bottom: 10px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+div#home div#main div.registered-school div.school {
+  flex-basis: 32%;
+  text-align: center;
+  background-color: #ddd;
+  margin-bottom: 20px;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+div#home div#main div.registered-school div.school a {
+  text-align: center;
+  background-color: #71d58e;
+  display: block;
+  padding: 0;
+  font-size: 1.1em;
+  border-radius: 120px;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+@media (max-width: 700px) {
+  div#home div#main div.services div.service {
+    flex-basis: 50%;
+  }
+  div#home div#main div.content-area div.side {
+    display: none;
+  }
+  div#home div#main div.content-area div.side {
+    display: none;
+  }
+  div#home div#main div.content-area {
+    justify-content: center;
+  }
+  div#home div#main div.content-area div.content {
+    flex-basis: 80%;
+    margin: auto;
+  }
+  div#home div#main div.content-area div.content h2 {
+    margin-left: 0;
+  }
+  div#home div#main div.content-area div.content ol {
+    margin-left: 0;
+  }
+
+  div#home div#main div.registered-school div.school {
+    flex-basis: 31%;
+  }
+}
+
+@media (max-width: 600px) {
+  div#home div#main div.developers div.developer {
+    flex-basis: 48%;
+  }
+  div#home div#main div.registered-school div.school {
+    flex-basis: 45%;
+  }
+}
+
+@media (max-width: 500px) {
+  div#home div#main div.services div.service {
+    flex-basis: 100%;
+  }
+  div#home div#main div.registered-school div.school {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+}
+@media (max-width: 420px) {
+  div#home div#main div.developers div.developer {
+    flex-basis: 100%;
+  }
+  div#home header div.welcome div.auth a {
+    color: #282424;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 12px 30px;
+    border-radius: 120px;
+    background-color: red;
+  }
+}

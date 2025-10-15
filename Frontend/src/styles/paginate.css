@@ -1,0 +1,32 @@
+ul.paginate li {
+  display: inline-block;
+  padding: 10px 15px;
+  border-right: 1px solid #eee;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  color: #282424;
+  cursor: pointer;
+  text-align: center;
+}
+
+ul.paginate li.active {
+  background-color: #71d58e;
+  color: #fff;
+}
+
+ul.paginate li:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+ul.paginate li:first-child {
+  border-radius: 5px 0 0 5px;
+  border-left: 1px solid #eee;
+}
+
+ul.paginate {
+  border-radius: 5px;
+}
+
+div#common-info ul.paginate {
+  margin-top: 10px;
+}

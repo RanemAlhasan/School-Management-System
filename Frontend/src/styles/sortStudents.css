@@ -1,0 +1,80 @@
+div#sort-students div.select {
+  margin-left: 10px;
+  width: 24.5vw;
+}
+
+div#sort-students div#sort-form-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0 0 10px;
+}
+
+div#sort-students div.sort-form {
+  display: flex;
+  border: 1px solid #bdbdbd;
+  border-left: none;
+  border-radius: 10px;
+  padding-right: 10px;
+  position: relative;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  flex-basis: 27%;
+}
+
+div#sort-students div.sort-form div.sort-title {
+  background-color: #71d58e;
+  text-align: center;
+  color: #fff;
+  flex-basis: 20%;
+  margin-right: 10px;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-left: 10px;
+}
+
+div#sort-students div.sort-form div.form-section {
+  flex-basis: 80%;
+}
+
+div#sort-students div.sort-form div.form-section p {
+  margin: 15px 0;
+  text-align: center;
+}
+
+div#sort-students div.sort-form div.form-section div.select {
+  width: 80%;
+  margin: 0;
+  margin: 15px auto;
+  background-color: #71d58e;
+}
+
+div#sort-students div.sort-form div.sort-title i {
+  display: block;
+  font-size: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-right: 0;
+  font-size: 1.2em;
+}
+
+div#sort-students button.sort {
+  margin-left: 10px;
+  margin-top: 20px;
+  display: block;
+  width: 20%;
+  background-color: #363636;
+}
+
+div.selection-sort {
+  display: flex;
+  width: 50vw;
+  margin-left: 10px;
+  justify-content: space-between;
+}
+
+div.selection-sort div.selection-sort-part {
+  flex-basis: 49%;
+}

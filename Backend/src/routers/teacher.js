@@ -1,0 +1,274 @@
+const express = require('express')
+const router = express.Router()
+const {Op} = require('sequelize')
+const auth = require('../middlewares/auth')
+const belongsTo = require('../middlewares/teacherBelongsToSchool')
+const classBelongsToSchool = require('../middlewares/classBelongsToSchool')
+const classroomBelongsToClass = require('../middlewares/classroomBelongsToClass')
+const teacherBelongsToClass = require('../middlewares/teacherBelongsToClass')
+
+const Teacher = require('../models/teacher/teacher')
+const Announcement = require('../models/announcement/announcement')
+const Absence = require('../models/session/absence')
+const TeacherInYear = require('../models/teacher/teacherInYear')
+const Session = require('../models/session/session')
+const TeacherInClass = require('../models/teacher/teacherInClass')
+const Day = require('../models/session/day')
+const Classroom = require('../models/class/classroom')
+const StudentInClass = require('../models/student/studentInClass')
+const Exam = require('../models/exam/exam')
+const Mark = require('../models/exam/mark')
+
+
+/*
+{
+    "certification": "PHD. HBD",
+    "personalInfo":{
+    "firstName": "Raed",
+    "lastName": "Sbenaty",
+    "birthDate": "04-17-2001",
+    "residentialAddress": "Damascus"
+    },
+    "account" : {
+        "email": "raed@hbd.com",
+        "password": "12345678",
+        "phoneNumber": "+963994418123"
+    }
+}
+ */
+
+router.post('/teachers/signup', async (req, res) => {
+    try {
+        req.body.account.user = 'Teacher'
+        const teacher = await Teacher.create(req.body, {include: ['account', 'personalInfo']})
+        teacher.account.sendMail('Welcome To Schoolink!', 'Have a nice experience as a teacher in our website!')
+        teacher.dataValues.token = await teacher.account.generateAuthToken()
+        res.status(201).send(teacher)
+    } catch (e) {
+        console.log(e)
+        res.status(400).send(e.message)
+    }
+})
+
+
+//get teacher's info
+// /teacher/1/info
+router.get('/teachers/:teacherId/info', auth(['Teacher']), async (req, res) => {
+    try {
+        res.status(201).send(req.account)
+    } catch (e) {
+        console.log(e)
+        res.status(400).send(e.message)
+    }
+})
+
+// get schools for a teacher
+// /teachers/1/schools
+router.get('/teachers/:teacherId/schools', auth(['Teacher']), async (req, res) => {
+    try {
+        const teacherInYears = await TeacherInYear.findAll({
+            attributes: ['startYear', 'endYear'], include: {
+                association: 'teacherInSchool', attributes: ['id'], where: {teacherId: req.params.teacherId},
+                include: {
+                    association: 'school', attributes: ['id', 'schoolName'], required: true,
+                    include: {association: 'account', attributes: ['siteName'], required: true}
+                }
+            }
+        })
+
+        const years = {}
+        teacherInYears.forEach(teacher => {
+            years[`${teacher.startYear}-${teacher.endYear}`] = years[`${teacher.startYear}-${teacher.endYear}`] || []
+            years[`${teacher.startYear}-${teacher.endYear}`].push(teacher.teacherInSchool.school)
+        })
+        res.send(years)
+    } catch (e) {
+        console.log(e)
+        res.status(500).send('Failed to fetch schools for this teacher.')
+    }
+})
+
+// get schedule for a teacher in a year
+// /teachers/1/2020-2021/semesters/1/sessions
+router.get('/teachers/:teacherId/:startYear-:endYear/semesters/:semesterNumber/sessions', auth(['Teacher']), async (req, res) => {
+    try {
+        const schedule = await Day.getScheduleForTeacher(req.params.teacherId,
+            req.params.startYear, req.params.endYear, req.params.semesterNumber)
+        res.send(schedule)
+    } catch (e) {
+        console.log(e)
+        res.status(500).send('Failed to fetch schedule for this teacher.')
+    }
+})
+
+
+// get announcements for a teacher
+// /teachers/1/alhbd/2020-2021/announcements
+router.get('/teachers/:teacherId/:siteName/:startYear-:endYear/announcements', auth(['Teacher']), belongsTo, async (req, res) => {
+    try {
+        const announcements = await Announcement.findAll({
+            attributes: ['sourceSchoolId', 'sourceStudentInClassId', 'heading', 'body', 'date'], where: {
+                startYear: req.params.startYear, endYear: req.params.endYear,
+                destinationTeacherInYearId: req.teacherInYear.id
+            }, include: [
+                {association: 'announcementType', attributes: ['name']},
+                {association: 'attachments', attributes: ['path']}
+            ]
+        })
+        res.send(announcements)
+    } catch (e) {
+        console.log(e)
+        res.status(400).send(e.message)
+    }
+})
+
+
+// get absences for a teacher
+// /teachers/1/alhbd/2020-2021/absences
+router.get('/teachers/:teacherId/:siteName/:startYear-:endYear/absences', auth(['Teacher']), belongsTo, async (req, res) => {
+    try {
+        const absences = await Absence.findAll({where: {teacherInYearId: req.teacherInYear.id}})
+        res.send(absences)
+    } catch (e) {
+        console.log(e)
+        res.status(400).send(e.message)
+    }
+})
+
+
+// get classes for a teacher in a year
+// /teachers/1/alhbd/2020-2021/classes
+router.get('/teachers/:teacherId/:siteName/:startYear-:endYear/classes', auth(['Teacher']), belongsTo, async (req, res) => {
+    try {
+        const classes = await TeacherInYear.findAll({
+            where: {id: req.teacherInYear.id}, required: true, include: {
+                association: 'teacherInClasses', attributes: ['schoolClassId'], required: true, include: {
+                    association: 'schoolClass', attributes: ['classId'], required: true, include: {
+                        association: 'class', attributes: ['name']
+                    }
+                }
+            }
+        })
+        res.send(classes)
+    } catch (e) {
+        console.log(e)
+        res.status(400).send(e.message)
+    }
+})
+
+// get classrooms for a class for a teacher in a year
+// /teachers/1/alhbd/2020-2021/classes/Fourth_Grade/classrooms
+router.get('/teachers/:teacherId/:siteName/:startYear-:endYear/classes/:className/classrooms', auth(['Teacher']), belongsTo, classBelongsToSchool, teacherBelongsToClass, async (req, res) => {
+    try {
+        const teacherInClassId = req.teacherInClass[0].id
+        const classrooms = await Session.findAll({where: {teacherInClassId}, attributes: ['classroomId']})
+
+        const classroomsSet = new Set()
+        classrooms.forEach(classroom => classroomsSet.add(classroom.classroomId))
+
+        let returnedClassrooms = []
+        for (id of classroomsSet) {
+            let cr = await Classroom.findByPk(id)
+            returnedClassrooms.push(cr)
+        }
+
+        res.send(returnedClassrooms)
+    } catch (e) {
+        console.log(e)
+        res.status(400).send(e.message)
+    }
+})
+
+// get subjects for a classroom for a class for a teacher in a year
+// /teachers/1/alhbd/2020-2021/classes/Fourth_Grade/classrooms/1/semesters/1/subjects
+router.get('/teachers/:teacherId/:siteName/:startYear-:endYear/classes/:className/classrooms/:classroomNumber/semesters/:semesterNumber/subjects', auth(['Teacher']), belongsTo, classBelongsToSchool, classroomBelongsToClass, teacherBelongsToClass, async (req, res) => {
+    try {
+        const teacherInClassId = req.teacherInClass[0].id
+        const classroomId = req.classroom.id
+
+        const subjects = await Session.findAll({
+            where: {teacherInClassId, classroomId}, attributes: ['subjectInSemesterId'], required: true, include: {
+                association: 'subjectInSemester',
+                where: {semester: req.params.semesterNumber},
+                attributes: ['subjectInYearId'],
+                required: true,
+                include: {
+                    association: 'subjectInYear'
+                }
+            }
+        })
+        res.send(subjects)
+    } catch (e) {
+        console.log(e)
+        res.status(400).send(e.message)
+    }
+})
+
+// get students in a classroom in a calss 
+// /teachers/1/alhbd/2020-2021/classes/Fourth_Grade/classrooms/1/students
+router.get('/teachers/:teacherId/:siteName/:startYear-:endYear/classes/:className/classrooms/:classroomNumber/students', auth(['Teacher']), belongsTo, classBelongsToSchool, classroomBelongsToClass, teacherBelongsToClass, async (req, res) => {
+    try {
+
+        const schoolClassId = req.schoolClass[0].id
+        const classroomId = req.classroom.id
+
+        const students = await StudentInClass.findAll({
+            where: {schoolClassId, classroomId}, required: true, include: {
+                association: 'studentInSchool', attributes: ['studentId'], required: true, include: {
+                    association: 'student', attributes: ['fatherName', 'motherName'], required: true, include: {
+                        association: 'personalInfo', attributes: ['firstName', 'lastName']
+                    }
+                }
+            }
+        })
+        res.send(students)
+
+    } catch (e) {
+        console.log(e)
+        res.status(400).send(e.message)
+    }
+})
+
+// teacher set students' marks in a specific classroom
+// /teachers/1/alhbd/2020-2021/classes/Fourth_Grade/classrooms/1/examMarks/add
+/* {
+    "fullMark": 100,
+    "examTypeId": 1,
+    "subjectInSemesterId": 1,
+    "marks": [
+        {
+            "studentInClassId": 1,
+            "value": 100
+        },
+        {
+            "studentInClassId": 2,
+            "value": 90
+        }
+    ]
+} */
+router.post('/teachers/:teacherId/:siteName/:startYear-:endYear/classes/:className/classrooms/:classroomNumber/examMarks/add', auth(['Teacher']), belongsTo, classBelongsToSchool, classroomBelongsToClass, teacherBelongsToClass, async (req, res) => {
+    try {
+
+        const schoolClassId = req.schoolClass[0].id
+        const classroomId = req.classroom.id
+
+        const student = await StudentInClass.findOne({where: {schoolClassId, classroomId}})
+        if (!student) return res.status(400).send('Student doesnt belong to this classroom.')
+
+        await Exam.create(req.body, {include: [Mark]})
+        res.send("Marks were added.")
+
+    } catch (e) {
+        console.log(e)
+        res.status(400).send(e.message)
+    }
+})
+
+// teacher get students' marks (specific class & classroom & Subject in semester & exam type)
+// /teachers/1/alhbd/2020-2021/classes/Fourth_Grade/classrooms/1/subjects/1/marks/types/1
+router.get('/teachers/:teacherId/:siteName/:startYear-:endYear/classes/:className/classrooms/:classroomNumber/subjects/:sisId/marks/types/:typeId',
+    auth(['Teacher']), belongsTo, classBelongsToSchool, teacherBelongsToClass,
+    async (req, res) => Mark.handleGetMarksRequest(req, res))
+
+
+module.exports = router

@@ -1,0 +1,11 @@
+{
+  "fullMark": "100",
+  "subjectInSemesterId": 1,
+  "examTypeId": 1,
+  "marks": [
+    { "studentInClassId": 1, "value": 1 },
+    { "studentInClassId": 2, "value": 1 },
+    { "studentInClassId": 3, "value": 1 },
+    { "studentInClassId": 4, "value": 1 }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "schoolSignupApi": "http://localhost:3000/schools/signup",
+  "studentSignupApi": "http://localhost:3000/students/signup",
+  "teacherSignupApi": "http://localhost:3000/teachers/signup"
+}

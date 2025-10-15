@@ -1,0 +1,84 @@
+div#add-common a#back {
+  display: none;
+}
+
+div#add-common form {
+  margin: 10px 0 0 10px;
+}
+
+div#add-common h4 {
+  margin-top: auto;
+}
+
+div#add-common form i {
+  font-size: 1em;
+}
+
+div#add-common {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+div#add-common div#common-pic {
+  flex-basis: 50%;
+  object-fit: contain;
+  position: relative;
+}
+
+div#school-content div#content div#addition h4 {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+div#addition ul.crud {
+  margin-bottom: 0px;
+}
+
+div#school-content div#content div#add-common form button {
+  margin-left: 0;
+  margin: auto;
+}
+
+div#add-common div#common-pic img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+
+div#add-common div#common-info {
+  flex-basis: 40%;
+}
+
+div#add-common ul.paginate {
+  text-align: center;
+}
+
+div#add-common ul.paginate li {
+  border-right: 1px solid #bdbdbd;
+  border-top: 1px solid #bdbdbd;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+div#add-common div#common-pic div#image-container {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  div#add-common div#common-pic div#image-container {
+    height: 80%;
+    top: 65%;
+  }
+}
+
+@media (max-width: 600px) {
+  div#add-common div#common-pic div#image-container {
+    height: 80%;
+    top: 60%;
+  }
+}

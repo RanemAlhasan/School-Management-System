@@ -1,0 +1,163 @@
+div.common-schedule div.select {
+  width: 24.5vw;
+  margin-left: 10px;
+}
+
+div#school-content div#content div.common-schedule h4 {
+  margin: 0;
+}
+
+div#school-content div#content div.common-schedule h4.semester {
+  margin: 0 0 10px 10px;
+}
+
+div.common-schedule-table {
+  display: block;
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+div.common-schedule-table h4 {
+  text-align: center;
+}
+
+div.common-schedule-table p {
+  text-align: center;
+}
+
+div#school-content div#content div.common-schedule-table h4 {
+  background-color: #71d58e;
+  padding: 10px;
+  color: #fff;
+}
+
+div#school-content div#content div.common-schedule-table h4:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+div#school-content div#content div.common-schedule-table p {
+  background-color: rgb(212, 212, 212);
+  padding: 10px;
+}
+
+div#school-content div#content div.common-schedule-table p.details {
+  border-bottom: 1px solid #fff;
+  padding-top: 10px;
+}
+
+div#school-content
+  div#content
+  div.common-schedule-table
+  p.details:last-of-type {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+div.view-schedule div.selection-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+div#school-content div#content div.view-schedule h4 {
+  margin: 10px 0 10px 0;
+}
+
+div#school-content div#content div.view-schedule div.common-schedule-table h4 {
+  margin: 0;
+}
+
+div.view-schedule div.selection-container div {
+  flex-basis: 32%;
+}
+
+div.view-schedule button {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+}
+
+div#school-content div#content div.common-schedule-table h4 {
+  margin: 0;
+}
+
+div.teacher-schedule {
+  margin-top: 20px;
+}
+
+div.teacher-selection div.select {
+  margin-left: 10px;
+  width: 24.5vw;
+}
+
+div.payments table {
+  width: 70%;
+  margin: 10px auto;
+}
+div.payments table td {
+  padding: 10px;
+  background-color: rgb(212, 212, 212);
+  text-align: center;
+}
+
+div.payments table th {
+  background-color: #71d58e;
+  padding: 10px;
+  color: #fff;
+}
+div.payments table th:first-child {
+  border-top-left-radius: 10px;
+}
+div.payments table th:last-child {
+  border-top-right-radius: 10px;
+}
+div.payments table tr.calculation th {
+  border-radius: 0 0 0 0;
+}
+div.payments table tr.remaining th {
+  border-radius: 0 0 0 0;
+  border-bottom-left-radius: 10px;
+}
+div.payments table tr.remaining td {
+  border-bottom-right-radius: 10px;
+}
+div#student-fees div.payments table {
+  transform: translateY(30px);
+}
+
+@media (max-width: 700px) {
+  div.common-schedule-table {
+    width: 97%;
+  }
+  div.common-schedule div.select {
+    width: 96%;
+    margin-left: 10px;
+  }
+  div.teacher-schedule {
+    margin-top: 20px;
+  }
+  div.teacher-selection div.select {
+    width: 96%;
+  }
+  div#absence div.select,
+  div#absence input {
+    width: 48%;
+  }
+  div#absence div.select {
+    margin-right: 10px;
+  }
+  div#absence button {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+  }
+  div.payments table {
+    width: 96%;
+    margin: 10px auto;
+  }
+  div#student-fees div.payments table {
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,78 @@
+.subject {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid hsl(137, 54%, 64%);
+    border-radius: 10px;
+    margin: 10px; 
+    padding: 10px 30px 10px 20px;
+    /* background-color:hsl(137, 54%, 64%) ; */
+ 
+  }
+#title1{
+      text-align: center;
+      font-size: 1.0em;
+      padding: 10px 5px;
+      border-radius: 10px 10px 0px 0px ;
+  }     
+.form input{
+      margin-bottom: 20px;
+  }
+  .form div#select{
+      margin-bottom: 0px;
+  }
+ #grades1 {
+    display: flex;
+    width:100%;
+    flex-wrap: wrap;
+    margin-left: 10px;
+  }  
+#grades1 #grade1.active {
+    background-color: #2d9c4d;
+    color: #fff;
+  }
+  
+#grades1 #grade1 {
+    background-color: #282424;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2em;
+    flex-basis: 47%;
+    margin: 0 10px 10px 0px;
+    padding: 15px 6px;
+    color: #fff;
+  }
+
+  @media (max-width: 1350px) {
+    .subject {
+      flex-basis: 20%;
+    }
+    #grades1 #grade1 {
+      flex-basis: 46%;
+    }
+    .subject input{
+      margin-bottom: 20px; 
+       flex-basis: 100%;}
+  }
+  @media (max-width: 1150px) {
+    .subject {
+      flex-basis: 20%;
+    }
+    #grades1 #grade1 {
+      flex-basis: 45%;
+    }
+    .subject input{
+      margin-bottom: 20px; 
+       flex-basis: 100%;}
+  }
+  @media (max-width: 900px) {
+    .subject {
+      flex-basis: 20%;
+    }
+    #grades1 #grade1 {
+      flex-basis: 100%;
+    }
+    .subject input{
+      margin-bottom: 20px; 
+       flex-basis: 100%;}
+  }
+

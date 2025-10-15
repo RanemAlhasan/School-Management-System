@@ -1,0 +1,198 @@
+div#marks table th input {
+  margin: auto;
+  display: inline-block;
+  font-size: 0.8em;
+  width: 90%;
+}
+
+div#marks table th input.red {
+  width: 10%;
+}
+
+div#marks div.select:first-of-type {
+  margin-bottom: 0;
+}
+
+div#marks h4 {
+  margin: 0;
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+div#school-content div#content div#marks h4:last-of-type {
+  margin-top: 10px;
+  margin-left: 0;
+}
+
+div#school-content div#content div#marks h4 {
+  margin-top: 10px;
+}
+
+div#marks div#selection-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+div#marks div#selection-container div.selection-part {
+  flex-basis: 31.8%;
+}
+
+div#marks div.exam-date {
+  width: 33%;
+  margin: auto;
+}
+
+div#marks table,
+div.sort-table table {
+  margin: auto;
+  width: 70%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+div#marks table th,
+div.sort-table table th {
+  background-color: #71d58e;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.1em;
+  width: 33%;
+  cursor: pointer;
+}
+
+div#marks table th div.error {
+  font-weight: normal;
+  font-size: 0.7em;
+}
+
+div#marks table td,
+div.sort-table table tr td {
+  padding: 10px;
+  text-align: center;
+  width: 33%;
+}
+
+div#marks table th:first-child,
+div.sort-table table th:first-child {
+  border-top-left-radius: 10px;
+}
+
+div#marks table th:last-child,
+div.sort-table table th:last-child {
+  border-top-right-radius: 10px;
+}
+
+div#marks table tr,
+div.sort-table table tr {
+  font-size: 1.1em;
+}
+
+div#marks table tr:nth-child(odd),
+div.sort-table table tr:nth-child(odd) {
+  background-color: rgb(212, 212, 212);
+}
+
+div#marks table tr:last-of-type,
+div.sort-table table tr:last-of-type {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+div#marks table tr:last-of-type td:last-of-type,
+div.sort-table table tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 10px;
+}
+
+div#marks table tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 10px;
+}
+
+div#marks ul.paginate {
+  margin: auto;
+  display: block;
+  text-align: center;
+  margin: 20px;
+  flex-basis: 33%;
+}
+
+div[role="alert"] {
+  line-height: 30px;
+}
+
+div#marks i.sort {
+  font-size: 1.1em;
+  margin-left: 5px;
+}
+
+div#marks div.bottom-container {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  justify-content: space-between;
+  margin-bottom: 200px;
+}
+
+div#marks div.bottom-container p {
+  flex-basis: 33%;
+}
+
+div#marks div.bottom-container button {
+  flex-basis: 20%;
+  height: auto;
+}
+
+ul.paginate li.rest {
+  color: #71d58e;
+}
+
+div#marks div.bottom-container .select {
+  flex-basis: 25%;
+  margin-top: 20px;
+  background-color: #71d58e;
+}
+
+div#marks button#load-marks {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+
+div.sort-table table th.straight {
+  border-radius: 0;
+}
+
+button.sort {
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+}
+
+div.marks-report div.selection-container {
+  display: flex;
+  padding: 0 10px;
+  justify-content: space-between;
+  width: 80%;
+}
+
+div.marks-report div.selection-container div.select,
+div.marks-report div.selection-container input,
+div.marks-report div.selection-container button {
+  flex-basis: 32%;
+}
+
+div.marks-report button {
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  div#marks table {
+    width: 90%;
+  }
+  div#marks div#selection-container div.selection-part {
+    flex-basis: 45%;
+  }
+  div#marks div.bottom-container {
+    width: 90%;
+  }
+}

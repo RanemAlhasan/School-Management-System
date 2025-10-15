@@ -1,0 +1,458 @@
+div#announcements div.select,
+div#announcements input,
+div#announcements textarea {
+  width: 24.5vw;
+  margin-left: 10px;
+  margin-top: 10px;
+  display: block;
+}
+
+textarea {
+  padding: 8px 12px;
+  border-radius: 3px;
+  font-size: 1.1em;
+  border: 1px solid rgb(134, 134, 134);
+  width: 100%;
+}
+textarea:focus {
+  outline: none;
+}
+
+div#announcements div.selection-container {
+  display: flex;
+}
+
+div#school-content div#content div#announcements h4:last-of-type {
+  margin-top: 5px;
+}
+
+div#announcements button,
+div#absence button {
+  margin: 10px 0 0 10px;
+}
+
+div#announcements div#form-control {
+  margin-bottom: 0;
+}
+
+div#absence div.selection-container {
+  display: flex;
+}
+
+div#absence div.select,
+div#absence input {
+  width: 24.5vw;
+  margin-left: 10px;
+  margin-top: 10px;
+  display: block;
+}
+
+div#exam-schedule div#selection-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+div#exam-schedule div#selection-container div.selection-part {
+  flex-basis: 31%;
+}
+
+div#exam-schedule div#selection-container div.selection-part h4 {
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+div#exam-schedule div.exam-set {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+div#exam-schedule div.exam-view {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+
+div#exam-schedule div.exam-view p {
+  color: #fff;
+  font-size: 1.1em;
+}
+
+div#exam-schedule div.exam-set input {
+  flex-basis: 24%;
+}
+
+div#exam-schedule div.exam-set div.select {
+  flex-basis: 49%;
+}
+
+div#exam-schedule div.multiple-exam {
+  width: 70%;
+  margin: auto;
+  margin-top: 15px;
+}
+
+div#exam-schedule div.multiple-exam div.exams-number {
+  background-color: #71d58e;
+  padding: 15px 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+div#school-content
+  div#content
+  div#exam-schedule
+  div.multiple-exam
+  h4:last-of-type {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+div#exam-schedule div.multiple-exam div.exam-container {
+  padding: 10px;
+}
+div#exam-schedule div.multiple-exam div.exam-container:nth-child(odd) {
+  background-color: #71d58e;
+}
+div#exam-schedule div.multiple-exam div.exam-container:nth-child(even) {
+  background-color: rgb(212, 212, 212);
+}
+
+div#exam-schedule div.multiple-exam input[type="date"] {
+  margin-bottom: 10px;
+}
+
+div#exam-schedule button {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div#exam-schedule div.select-schedule {
+  margin: 0 10px;
+  width: 24.5vw;
+}
+
+div#school-content
+  div#content
+  div#exam-schedule
+  div.select-schedule
+  h4:last-of-type {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+div.schedule div.selection-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+div#school-content div#content div.schedule h4:last-of-type {
+  margin: 10px 0;
+}
+
+div.schedule div.selection-container div.selection-part {
+  flex-basis: 32%;
+}
+
+div.schedule div.schedule-table {
+  width: 70%;
+  margin: auto;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+div#school-content div#content div.schedule div.schedule-table h4 {
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  color: #fff;
+}
+
+div.schedule div.schedule-table h4.day {
+  background-color: #363636;
+}
+
+div.schedule div.schedule-table h4.time {
+  background-color: #71d58e;
+}
+
+div.schedule div.schedule-table div.assign-time {
+  background-color: rgb(212, 212, 212);
+  padding: 0px 10px 20px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+div#school-content
+  div#content
+  div.schedule
+  div.schedule-table
+  div.assign-time
+  div
+  h4 {
+  color: #000;
+}
+
+div.schedule div.schedule-table div.assign-time div {
+  flex-basis: 49%;
+}
+
+div.schedule button {
+  margin: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+div.marks-report-table {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 100px;
+  transform: translateY(40px);
+}
+
+div.marks-report-table div.semester-number {
+  padding: 10px;
+  background-color: #363636;
+  color: #fff;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+div.marks-report-table div.semester-number:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+div.marks-report-table div.subject-name {
+  padding: 10px;
+  background-color: #71d58e;
+  color: #fff;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+div.marks-report-table div.mark-data {
+  padding: 10px;
+  background-color: rgb(212, 212, 212);
+  color: #000;
+  text-align: center;
+  justify-content: space-between;
+  font-size: 1.1em;
+  border-bottom: 1px solid #fff;
+}
+
+div.marks-report-table div.mark-data:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+div.marks-report-table div.mark-data p.mark-date {
+  border-bottom: 1px solid #fff;
+  padding: 10px;
+}
+
+h4.day {
+  color: red;
+}
+
+div.marks-report-table div.mark-data p:first-child {
+  margin-bottom: 10px;
+}
+
+div.print-container {
+  margin: auto;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  text-align: center;
+  padding: 20px;
+}
+
+div.marks-report button.print,
+button.print {
+  margin: auto;
+}
+
+div.teacher-classes div.select {
+  width: 24.5vw;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+div#school-content div#content div.teacher-classes h4 {
+  margin: 10px 0 10px 10px;
+}
+div#school-content div#content div.teacher-classes form button {
+  margin: 10px 0 10px 10px;
+}
+
+@media (max-width: 700px) {
+  div#exam-schedule div.multiple-exam {
+    width: 97%;
+  }
+  div.marks-report-table {
+    width: 96%;
+    transform: translateY(20px);
+  }
+  div.marks-report div.selection-container {
+    margin-top: 15px;
+  }
+  div.marks-report div.selection-container {
+    width: 100%;
+  }
+  div.teacher-classes div.select {
+    width: 93.5%;
+  }
+  div#school-content div#content div.teacher-classes form button {
+    margin: 10px auto;
+  }
+  div#exam-schedule div.select-schedule {
+    width: 97%;
+  }
+}
+
+div.student-announcements div.select {
+  width: 24.5vw;
+  margin-left: 10px;
+}
+
+div.view-announcements {
+  margin: 20px 0 10px 10px;
+  width: 70%;
+}
+
+div.view-announcements div.announcements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(212, 212, 212);
+  padding: 10px;
+  border-bottom: 1px solid #fff;
+}
+
+div.view-announcements div.announcements:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+div.view-announcements div.announcements:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+div.view-announcements div.announcements p {
+  flex-basis: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.view-announcements div.announcements button {
+  margin: 0;
+  height: auto;
+}
+
+div.specific-announcement {
+  border-radius: 10px;
+  margin: auto;
+  width: 70%;
+  transform: translateY(30px);
+}
+
+div.specific-announcement p {
+  background-color: rgb(212, 212, 212);
+  border-bottom: 1px solid #fff;
+}
+
+div.specific-announcement span {
+  font-size: 1em;
+  display: block;
+  margin: 0;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #363636;
+  color: #fff;
+  padding: 10px;
+}
+
+div.specific-announcement p span:last-child {
+  background-color: rgb(212, 212, 212);
+  color: #000;
+}
+
+div.specific-announcement span.at {
+  margin-bottom: 0;
+}
+
+div.specific-announcement a {
+  margin: auto;
+  text-decoration: none;
+  background-color: #71d58e;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  display: inline-block;
+  width: auto;
+  margin-left: 10px;
+  text-align: center;
+}
+
+div.specific-announcement div.at-container {
+  background-color: rgb(212, 212, 212);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: space-around;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+div.specific-announcement div.at-container button {
+  margin-top: 0;
+}
+
+div.specific-announcement div.at-container div {
+  margin: 10px 0;
+  flex-basis: 32%;
+  text-align: center;
+}
+
+div#teacher-announcements div.specific-annoncement {
+  margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+  div.view-announcements {
+    width: 97%;
+    margin: 20px auto 10px auto;
+  }
+  div.student-announcements div.select {
+    width: 97%;
+    margin: auto;
+  }
+  div.specific-announcement {
+    border-radius: 10px;
+    margin: auto;
+    width: 96%;
+    transform: translateY(15px);
+  }
+}
+
+div#exam-schedule div.multiple-exam div.exam-container:nth-child(even) p {
+  color: #000;
+}
+
+div#school-content
+  div#content
+  div#exam-schedule
+  div.multiple-exam
+  div.exam-container:nth-child(even)
+  h4 {
+  color: #000;
+}

@@ -1,0 +1,22 @@
+table.teacher-info {
+  width: 99%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+table.teacher-info th {
+  background-color: #71d58e;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.1em;
+}
+
+table.teacher-info td {
+  text-align: center;
+  background-color: #282424;
+  cursor: pointer;
+}
+
+table.teacher-info td.active {
+  background-color: #71d58e;
+}

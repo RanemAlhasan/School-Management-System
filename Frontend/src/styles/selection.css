@@ -1,0 +1,41 @@
+div.select div i {
+  display: inline-block;
+}
+
+div.select div.title {
+  padding: 10px;
+  overflow: auto;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: -2px;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.select div.title span {
+  font-size: 1em;
+}
+
+div.select {
+  position: relative;
+  background-color: #363636;
+  color: #fff;
+  border-radius: 5px;
+}
+
+div.select div.options div {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+div.select div.options {
+  position: absolute;
+  width: 100%;
+  background-color: #363636;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  max-height: 41vh;
+  overflow-y: scroll;
+  z-index: 1000;
+}

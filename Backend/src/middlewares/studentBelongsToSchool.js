@@ -1,0 +1,18 @@
+const School = require('../models/school/school')
+const StudentInClass = require('../models/student/studentInClass')
+
+module.exports = async (req, res, next) => {
+    try {
+        const school = await School.findOne({include: {association: 'account', where: {siteName: req.params.siteName}}})
+
+        const studentInClass = await StudentInClass.getStudentInClass(req.params.studentId,
+            school.id, req.params.startYear, req.params.endYear)
+
+        if (!studentInClass) throw new Error()
+
+        req.studentInClass = studentInClass
+        next()
+    } catch (e) {
+        res.status(401).send('Student doesn\'t belong to this school in this year.')
+    }
+}

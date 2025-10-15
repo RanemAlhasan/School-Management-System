@@ -1,0 +1,247 @@
+div#public-content input {
+  width: 24.5vw;
+  margin-left: 10px;
+}
+div#public-content div.select {
+  margin-left: 10px;
+}
+
+div#school-content div#content div#public-content h4 {
+  margin: 10px 0 10px 10px;
+}
+
+div.article {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid hsl(137, 54%, 64%);
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+div.article div.article-icon {
+  color: #71d58e;
+  display: block;
+  margin-bottom: 10px;
+}
+
+div#public-content div.article div.input-container {
+  padding: 10px;
+}
+
+div#public-content div.article input {
+  margin: 0;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 100%;
+}
+
+div.content-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div#public-content div.content-container div.content-part {
+  flex-basis: 49%;
+}
+
+div#public-content button {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+div#public-content textarea {
+  margin-bottom: 10px;
+}
+
+div#public-content textarea:last-child {
+  margin-bottom: 0;
+}
+
+div#get-content div.content-part {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div#get-content div.content-part div.article {
+  flex-basis: 48%;
+}
+
+div#get-content div.content-part div.article p {
+  margin-bottom: 10px;
+}
+
+div#get-content div.content-part div.article p:last-child {
+  margin-bottom: 0;
+}
+
+div#get-content i {
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+div#public-content div.edit {
+  margin-right: 10px;
+}
+
+div#public-content div.edit button {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+div.delete-content div.article {
+  border: 1px solid #e74c3c;
+}
+
+div.delete-content i {
+  color: #e74c3c;
+}
+
+@media (max-width: 700px) {
+  div#public-content input {
+    width: 96vw;
+    margin-left: 10px;
+  }
+  div#public-content button {
+    display: block;
+    margin: 10px auto;
+  }
+  div#get-content div.content-part div.article {
+    flex-basis: 46%;
+  }
+}
+
+div#public-school-content {
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+}
+
+div#public-school-content p.school-name {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #fff;
+  font-size: 8em;
+  letter-spacing: 0.05em;
+  margin-left: 13vw;
+}
+
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+div#public-school-content p.school-name:hover {
+  animation: move 1s ease-in-out 0s 1;
+}
+
+div.content {
+  padding: 20px 10px;
+}
+
+div.content h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 1.4em;
+}
+
+div.content article {
+  text-align: center;
+  margin-bottom: 10px;
+  line-height: 1.7em;
+}
+
+div.content:nth-child(even) {
+  color: #000;
+  background-color: #eee;
+}
+
+div.content:nth-child(odd) {
+  background-color: #fff;
+}
+
+div.public-school-info {
+  background-color: #eee;
+}
+
+div.public-school-info div.content-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 10px 10px 10px;
+  background-color: #363636;
+}
+
+div.public-school-info div.content-container div.secondary {
+  flex-basis: 32%;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #fff;
+  border: 1px solid #71d58e;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+div.public-school-info div.content-container div.secondary i {
+  color: #71d58e;
+}
+
+div.public-school-info div.content-container div.secondary p {
+  margin-top: 10px;
+  color: #fff;
+  line-height: 1.7em;
+}
+
+footer {
+  background-color: #71d58e;
+  padding: 20px;
+}
+
+footer h2 {
+  color: #fff;
+  text-align: center;
+}
+
+footer section.contact {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+footer section.contact div {
+  flex-basis: 32%;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+}
+
+footer section.contact a {
+  flex-basis: 32%;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+}
+
+footer section.contact i {
+  color: #4267b2;
+  margin-right: -3px;
+}
+
+footer section.contact div p {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  div#public-school-content p.school-name {
+    font-size: 5em;
+  }
+}

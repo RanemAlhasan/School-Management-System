@@ -1,0 +1,172 @@
+ul.crud li {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 0;
+  padding-right: 20px;
+  font-size: 1.1em;
+  border-bottom: 3px solid #bdbdbd;
+  color: #363636;
+}
+
+ul.crud li a {
+  text-decoration: none;
+  color: #363636;
+}
+
+ul.crud li.active {
+  border-bottom: 3px solid #71d58e;
+}
+
+ul.crud {
+  margin-left: 10px;
+}
+
+div#classroom div#add-classrooms div.select {
+  width: 24.5vw;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+div#classroom div#add-classrooms h4 {
+  margin-left: 10px;
+}
+
+div#classroom div#add-classrooms input {
+  width: 24.5vw;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+div#add-classrooms div#classrooms-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  align-items: flex-start;
+}
+
+div#add-classrooms div#classrooms-container div#form-control {
+  margin-bottom: 0;
+}
+
+div#add-classrooms div#classroom-form {
+  border: 1px solid #bdbdbd;
+  border-left: none;
+  border-radius: 10px;
+  padding-right: 10px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  flex-basis: 31%;
+}
+
+div#add-classrooms button {
+  margin-top: 0;
+  background-color: #363636;
+  margin-bottom: 10px;
+  width: 16.5%;
+  padding: 0 5px;
+}
+
+div#add-classrooms div#classroom-form div#form {
+  flex-basis: 80%;
+  padding: 10px 0;
+}
+
+div#add-classrooms div.error {
+  margin-left: 10px;
+}
+
+div#add-classrooms div#classroom-form div.error {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+div#add-classrooms div#classroom-form input {
+  margin: 0;
+  width: 100%;
+}
+
+div#add-classrooms div#classroom-form input:first-of-type {
+  width: 100%;
+}
+
+div#add-classrooms div#classroom-form div#form-control:first-of-type div.error {
+  margin-bottom: 10px;
+}
+
+div#add-classrooms div#classroom-form div#title {
+  background-color: #71d58e;
+  text-align: center;
+  color: #fff;
+  flex-basis: 20%;
+  margin-right: 10px;
+  position: relative;
+}
+
+div#add-classrooms div#classroom-form div#title span {
+  font-size: 1.1em;
+  position: absolute;
+  padding: 0;
+  padding: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div#add-classrooms button {
+  margin-left: 10px;
+}
+
+div#get-classes div.select {
+  width: 24.5vw;
+  margin: 10px 0 0 10px;
+}
+
+div#get-classrooms div.select {
+  width: 24.5vw;
+  margin: 20px 0 0 10px;
+}
+
+div#get-classrooms p {
+  margin-bottom: 10px;
+}
+
+div#get-classrooms p:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  div#add-classrooms div#classroom-form {
+    flex-basis: 30.7%;
+  }
+}
+
+@media (max-width: 800px) {
+  div#add-classrooms div#classroom-form {
+    flex-basis: 30%;
+  }
+}
+
+@media (max-width: 700px) {
+  div#add-classrooms div#classroom-form {
+    flex-basis: 29%;
+  }
+}
+
+@media (max-width: 685px) {
+  div#add-classrooms div#classroom-form {
+    flex-basis: 46%;
+  }
+  div#add-classrooms div#classroom-container {
+    justify-content: space-between;
+  }
+  div#classroom div#add-classrooms div.select {
+    width: 30vw;
+  }
+  div#classroom div#add-classrooms input {
+    width: 30vw;
+  }
+}
